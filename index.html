@@ -1,16 +1,47 @@
+<!DOCTYPE html>
 <html>
-    <head>
+
+<head>
+    <title>Web App - Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+</head>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+<body>
+    <div id="maindiv">
+        <div id="title">
+            <h1>Simple Interest Calculator</h1>
+        </div>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+        <div id="form1">
+            <label for="principal">Amount</label>
+            <input type="number" id="principal"> <br></br>
+            <label for="rate">Interest Rate</label>
+            <input type="range" id="rate" value="10.75" step=".25" min="1" max="20"
+                oninput="this.nextElementSibling.value = this.value">
+            <output>10.75</output>%
+            <br><br>
+            <label for="years">No. of Years</label>
+            <select id="years">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br><br>
+            <input type="button" value="Compute Interest" onclick="compute()">
+        </div>
+        <div id="outputtxt">
+            <p id="output"></p>
+        </div>
+        <footer align="left">© Everyone Can Get Rich</footer>
+    </div>
+</body>
+
 </html>
